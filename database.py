@@ -13,7 +13,8 @@ def get_products():
     cur.execute("select * from products")
     products = cur.fetchall()
     return products
-
+x = get_products()
+print(x)
 # sales
 
 
@@ -46,7 +47,7 @@ product_value2 = ('spoon',50,100)
 insert_products(product_value1)
 insert_products(product_value2)
 products = get_products()
-print(products)
+# print(products)
 
 # inserting sales
 current_datetime = str(datetime.now())
@@ -58,4 +59,4 @@ def insert_sales(values):
 sale_values = (2,8,current_datetime)    
 insert_sales(sale_values)
 sales = get_sales()
-print(sales)
+# print(sales)
